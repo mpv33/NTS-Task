@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Medicine Name</title>
+
+
+</head>
+<body>
+
+<main role="main">
+    <div class="container">
+        <h2 class="text-center pt-3"> Medicine Detials </h2>
+        <br/>
+        <h3> Recent Medicine </h3>
+        <hr/>
+
+        {% for tablets in tablet.all %}
+
+        <a href="{% url 'detials' tablets.id %}"> <h4>{{tablets.tablet_name}}</h4> </a>
+        <br/>
+
+        {% endfor %}
+
+    </div>
+
+
+</main>
+</body>
+</html>
